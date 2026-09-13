@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Barra de Coctelería</title>
+    <link rel="icon" href="icon.png" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header-content">
+        <a href="#" class="logo">
+          <img src="icon.png" alt="Logo de barra de coctelería" />
+        </a>
+
+        <nav class="nav">
+          <a href="#paquetes">Paquetes</a>
+          <a href="#bebidas">Bebidas</a>
+          <a href="#incluye">Incluye</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container">
+          <h1>Tu evento, tu bebida.</h1>
+
+          <p>
+            Servicio de barra de coctelería para eventos, reuniones y
+            celebraciones.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#paquetes" class="btn btn-primary"> Ver paquetes </a>
+
+            <a href="#" class="btn btn-whatsapp js-whatsapp">
+              Cotizar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAQUETES -->
+      <section id="paquetes" class="section">
+        <div class="container">
+          <div class="section-title">
+            <span>Servicios</span>
+            <h2>Elige la modalidad para tu evento</h2>
+          </div>
+
+          <!-- SERVICIO POR VASO -->
+          <div class="service-type">
+            <div class="service-header">
+              <div>
+                <h3>Servicio por vaso</h3>
+
+                <p>Contrata únicamente las bebidas que necesites.</p>
+              </div>
+
+              <div class="duration">2 horas</div>
+            </div>
+
+            <div class="cards">
+              <article class="card">
+                <h3>Esencial</h3>
+
+                <!--<div class="price">
+                  $55
+                  <span>/ vaso</span>
+                </div>-->
+
+                <p>Ideal para eventos sencillos.</p>
+
+                <ul>
+                  <li>Pitufo</li>
+                  <li>Cuba</li>
+                  <li>Paloma</li>
+                </ul>
+              </article>
+
+              <article class="card featured">
+                <span class="badge"> Recomendado </span>
+
+                <h3>Especial</h3>
+
+                <!--<div class="price">
+                  $65
+                  <span>/ vaso</span>
+                </div>-->
+
+                <p>Mayor variedad de cocteles.</p>
+
+                <ul>
+                  <li>Pitufo</li>
+                  <li>Cuba</li>
+                  <li>Paloma</li>
+                  <li>Mojitos</li>
+                </ul>
+              </article>
+
+              <article class="card">
+                <h3>Premium</h3>
+
+                <!--<div class="price">
+                  $75
+                  <span>/ vaso</span>
+                </div>-->
+
+                <p>La opción más completa.</p>
+
+                <ul>
+                  <li>Pitufo</li>
+                  <li>Cuba</li>
+                  <li>Paloma</li>
+                  <li>Mojitos</li>
+                  <li>Piña Colada</li>
+                </ul>
+              </article>
+
+              <article class="card">
+                <h3>Michelada</h3>
+
+                <!--<div class="price">
+                  /* $50
+                  <span>/ vaso</span>
+                </div>-->
+
+                <p>Disponible únicamente en servicio por vaso.</p>
+
+                <ul>
+                  <li>Michelada</li>
+                </ul>
+              </article>
+            </div>
+
+            <p class="service-note">
+              El servicio por vaso tiene una duración de
+              <strong>2 horas</strong>.
+            </p>
+          </div>
+
+          <!-- BARRA LIBRE -->
+          <div class="service-type barra-libre">
+            <div class="service-header">
+              <div>
+                <h3>Barra libre</h3>
+
+                <p>
+                  Disfruta de bebidas incluidas durante las horas contratadas.
+                </p>
+              </div>
+
+              <div class="duration">Horas contratadas</div>
+            </div>
+
+            <!-- SELECTOR DE HORAS -->
+            <!--<div class="hours-selector">
+              <label for="horasBarra"> ¿Cuántas horas deseas contratar? </label>
+
+              <select id="horasBarra">
+                <option value="2">2 horas</option>
+
+                <option value="3">3 horas</option>
+
+                <option value="4">4 horas</option>
+
+                <option value="5">5 horas</option>
+
+                <option value="6">6 horas</option>
+              </select>
+            </div>-->
+
+            <div class="cards">
+              <!-- PITUFO -->
+              <article class="card barra-card">
+                <h3>Pitufo</h3>
+
+                <div class="price">
+                  $139
+
+                  <span>/ persona</span>
+                </div>
+
+                <p class="hours-text">Precio para 2 horas</p>
+
+                <ul>
+                  <li>Pitufos</li>
+                  <li>Paloma</li>
+                  <li>Cuba</li>
+                </ul>
+
+                <a href="#contacto" class="btn btn-primary"> Cotizar </a>
+              </article>
+
+              <!-- COCTELERO -->
+              <article class="card featured barra-card">
+                <span class="badge"> Recomendado </span>
+
+                <h3>Coctelero</h3>
+
+                <div class="price">
+                  $179
+                  <span>/ persona</span>
+                </div>
+
+                <p class="hours-text">Precio para 2 horas</p>
+
+                <ul>
+                  <li>Pitufos</li>
+                  <li>Paloma</li>
+                  <li>Cuba</li>
+                  <li>Mojitos</li>
+                </ul>
+
+                <a href="#contacto" class="btn btn-primary"> Cotizar </a>
+              </article>
+
+              <!-- PREMIUM -->
+              <article class="card barra-card">
+                <h3>Premium</h3>
+
+                <div class="price">
+                  $219
+                  <span>/ persona</span>
+                </div>
+
+                <p class="hours-text">Precio para 2 horas</p>
+
+                <ul>
+                  <li>Pitufos</li>
+                  <li>Paloma</li>
+                  <li>Cuba</li>
+                  <li>Mojitos</li>
+                  <li>Piña Colada</li>
+                </ul>
+
+                <a href="#contacto" class="btn btn-primary"> Cotizar </a>
+              </article>
+            </div>
+
+            <div class="important-note">
+              <strong>Importante:</strong>
+
+              <p>
+                - La barra libre funciona únicamente durante las horas
+                contratadas.
+              </p>
+              <p>
+                - El tiempo comienza cuando se entregan las pulseras y se abre
+                el servicio.
+              </p>
+              <p>
+                - La cerveza y la michelada no están incluidas en la barra
+                libre. Se ofrecen únicamente bajo la modalidad de servicio por
+                vaso.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BEBIDAS -->
+      <section id="bebidas" class="section section-dark">
+        <div class="container">
+          <div class="section-title">
+            <span>Variedad</span>
+
+            <h2>Nuestras bebidas</h2>
+          </div>
+
+          <div class="drink-grid">
+            <div class="drink">
+              <h3>Pitufo</h3>
+              <p>Azul, rojo, morado y verde.</p>
+            </div>
+
+            <div class="drink">
+              <h3>Mojito</h3>
+              <p>Frutos rojos, mango, maracuyá y blueberry.</p>
+            </div>
+
+            <div class="drink">
+              <h3>Paloma</h3>
+              <p>Una opción fresca y clásica.</p>
+            </div>
+
+            <div class="drink">
+              <h3>Piña Colada</h3>
+              <p>Algo veraniego para la ocasión.</p>
+            </div>
+
+            <div class="drink">
+              <h3>Cuba</h3>
+              <p>Un clásico para cualquier celebración.</p>
+            </div>
+
+            <div class="drink">
+              <h3>Michelada</h3>
+              <p>La clásica opción para los amantes de lo tradicional.</p>
+              <p style="font-size: 10px">*Disponible únicamente por vaso*</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INCLUYE -->
+      <section id="incluye" class="section">
+        <div class="container">
+          <div class="section-title">
+            <span>Servicio</span>
+
+            <h2>¿Qué incluye?</h2>
+          </div>
+
+          <div class="includes-grid">
+            <div>
+              <h3>🍹 Preparación</h3>
+              <p>
+                Preparación de las bebidas incluidas en el paquete seleccionado.
+              </p>
+            </div>
+
+            <div>
+              <h3>🥤 Vasos</h3>
+              <p>Vasos necesarios para el servicio.</p>
+            </div>
+
+            <div>
+              <h3>👨‍🍳 Bartender</h3>
+              <p>Personal encargado de preparar y servir las bebidas.</p>
+            </div>
+
+            <div>
+              <h3>🎟️ Pulseras</h3>
+              <p>
+                Identificación de los invitados incluidos en la barra libre.
+              </p>
+            </div>
+
+            <div>
+              <h3>🚚 Transporte</h3>
+              <p>Hasta 5 km alrededor de Ixtapaluca sin costo adicional.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONDICIONES -->
+      <section class="section conditions">
+        <div class="container">
+          <div class="section-title">
+            <span
+              style="
+                color: var(--accent);
+                font-size: 35px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+              "
+              >Información</span
+            >
+
+            <!--<h2>Condiciones del servicio</h2>-->
+          </div>
+
+          <ul>
+            <li>
+              El tiempo comienza al entregar las pulseras y abrir el servicio,
+              Las pulseras son personales e intransferibles.
+            </li>
+
+            <li>La cerveza y michelada se ofrecen únicamente por vaso.</li>
+
+            <li>
+              El montaje y desmontaje no cuentan dentro de las horas de
+              servicio.
+            </li>
+
+            <li>Transporte incluido hasta 5 km alrededor de Ixtapaluca.</li>
+            <li>
+              Se requiere un depósito del 50% para apartar la fecha del evento,
+              el pago restante se realiza al finalizar el servicio, en efectivo
+              o transferencia.
+            </li>
+            <li>Se proporcionara la cotizacion via WhatsApp en formato PDF.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contacto" class="section contact">
+        <div class="container">
+          <h2>¿Planeas un evento?</h2>
+
+          <p>
+            Escríbenos para conocer disponibilidad y recibir una cotización
+            personalizada.
+          </p>
+
+          <a href="#" class="btn btn-whatsapp js-whatsapp">
+            <img
+              src="whatsapp.png"
+              alt=""
+              style="width: 20px; height: 20px; margin-right: 10px"
+            />
+            Cotizar por WhatsApp
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Barra de Coctelería</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

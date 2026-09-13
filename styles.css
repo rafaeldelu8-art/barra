@@ -1,0 +1,867 @@
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+  --background: #111214;
+  --background-soft: #181a1e;
+
+  --card: #202329;
+  --card-hover: #272a30;
+
+  --text: #f4f4f4;
+  --text-soft: #b7bac1;
+
+  --accent: #d6b56c;
+  --accent-light: #ead39b;
+
+  --border: rgba(255, 255, 255, 0.08);
+
+  --whatsapp: #25d366;
+}
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.container {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(17, 18, 20, 0.92);
+
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.header-content {
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+.logo img {
+  display: block;
+
+  max-width: 170px;
+  max-height: 58px;
+
+  object-fit: contain;
+}
+
+/* NAV */
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+}
+
+.nav a {
+  color: var(--text-soft);
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+  min-height: 72vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 90px 20px;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(214, 181, 108, 0.1),
+    transparent 55%
+  );
+}
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 72px);
+
+  line-height: 1.05;
+
+  margin: 18px 0 22px;
+}
+
+.hero p {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: var(--text-soft);
+
+  font-size: 18px;
+}
+
+/* =====================================================
+   BOTONES HERO
+===================================================== */
+
+.hero-buttons {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 35px;
+}
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 23px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  transition: 0.2s ease;
+
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--accent);
+
+  color: #171717;
+}
+
+.btn-primary:hover {
+  background: var(--accent-light);
+
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background: var(--whatsapp);
+
+  color: white;
+}
+
+.btn-whatsapp:hover {
+  filter: brightness(1.08);
+
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   SECCIONES
+===================================================== */
+
+.section {
+  width: 100%;
+
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  padding: 80px 22px;
+}
+
+.section-dark {
+  max-width: none;
+
+  background: var(--background-soft);
+}
+
+/* =====================================================
+   TÍTULOS DE SECCIÓN
+===================================================== */
+
+.section-title {
+  text-align: center;
+
+  margin-bottom: 45px;
+}
+
+.section-title span {
+  color: var(--accent);
+
+  font-size: 45px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.section-title h2 {
+  font-size: clamp(30px, 5vw, 44px);
+
+  margin: 8px 0;
+}
+
+/* =====================================================
+   MODALIDADES / TIPOS DE SERVICIO
+===================================================== */
+
+.service-type {
+  margin-bottom: 70px;
+}
+
+.service-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 30px;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.service-header h3 {
+  font-size: 28px;
+
+  color: var(--accent);
+
+  margin-bottom: 5px;
+}
+
+.service-header p {
+  color: var(--text-soft);
+
+  font-size: 15px;
+}
+
+.duration {
+  flex-shrink: 0;
+
+  padding: 9px 15px;
+
+  border: 1px solid rgba(214, 181, 108, 0.35);
+
+  border-radius: 20px;
+
+  color: var(--accent);
+
+  font-size: 13px;
+
+  font-weight: bold;
+}
+
+/* =====================================================
+   TARJETAS
+===================================================== */
+
+.cards {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 15px;
+
+  padding: 30px;
+
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  background: var(--card-hover);
+
+  transform: translateY(-5px);
+}
+
+.card.featured {
+  border-color: rgba(214, 181, 108, 0.55);
+}
+
+.card h3 {
+  font-size: 23px;
+
+  margin-bottom: 5px;
+}
+
+.card > p {
+  color: var(--text-soft);
+
+  font-size: 14px;
+}
+
+/* =====================================================
+   PRECIO
+===================================================== */
+
+.price {
+  color: var(--accent);
+
+  font-size: 38px;
+
+  font-weight: bold;
+
+  margin: 20px 0;
+}
+.price-value {
+  color: var(--accent);
+
+  font-size: 38px;
+
+  font-weight: bold;
+
+  margin: 20px 0;
+}
+
+.price span {
+  color: var(--text-soft);
+
+  font-size: 14px;
+
+  font-weight: normal;
+}
+
+/* =====================================================
+   LISTA DE BENEFICIOS
+===================================================== */
+
+.card ul {
+  list-style: none;
+
+  margin-top: 10px;
+
+  margin-bottom: 20px;
+}
+
+.card li {
+  color: #d8d9dc;
+
+  padding: 6px 0;
+}
+
+.card li::before {
+  content: "✓";
+
+  color: var(--accent);
+
+  font-weight: bold;
+
+  margin-right: 9px;
+}
+
+/* =====================================================
+   BADGE RECOMENDADO
+===================================================== */
+
+.badge {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  background: var(--accent);
+
+  color: #171717;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+}
+
+/* =====================================================
+   BOTÓN DENTRO DE TARJETAS
+===================================================== */
+
+.card .btn {
+  margin-top: auto;
+
+  width: 100%;
+}
+
+/* =====================================================
+   NOTA DEL SERVICIO POR VASO
+===================================================== */
+
+.service-note {
+  margin-top: 25px;
+
+  padding: 15px;
+
+  text-align: center;
+
+  color: var(--text-soft);
+
+  background: var(--background-soft);
+
+  border-radius: 8px;
+}
+
+.service-note strong {
+  color: var(--accent);
+}
+
+/* =====================================================
+   BARRA LIBRE
+===================================================== */
+
+.barra-libre {
+  margin-top: 30px;
+}
+
+/* =====================================================
+   SELECTOR DE HORAS
+===================================================== */
+
+.hours-selector {
+  width: 100%;
+
+  max-width: 450px;
+
+  margin: 30px auto;
+
+  padding: 25px;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+.hours-selector label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: var(--text);
+
+  font-weight: 600;
+}
+
+.hours-selector select {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  border-radius: 8px;
+
+  border: 1px solid #444;
+
+  background: var(--background);
+
+  color: var(--text);
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.hours-selector select:focus {
+  outline: none;
+
+  border-color: var(--accent);
+}
+
+/* =====================================================
+   TEXTO DE HORAS
+===================================================== */
+
+.hours-text {
+  color: var(--text-soft);
+
+  font-size: 13px;
+
+  margin-bottom: 5px;
+}
+
+/* =====================================================
+   INFORMACIÓN IMPORTANTE
+===================================================== */
+
+.important-note {
+  margin-top: 30px;
+
+  padding: 20px;
+
+  border-left: 3px solid var(--accent);
+
+  background: var(--card);
+
+  border-radius: 8px;
+}
+
+.important-note strong {
+  color: var(--accent);
+}
+
+.important-note p {
+  color: var(--text-soft);
+
+  margin: 8px 0;
+
+  font-size: 14px;
+}
+
+/* =====================================================
+   BEBIDAS
+===================================================== */
+
+.drink-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.drink {
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  transition: 0.25s ease;
+}
+
+.drink:hover {
+  background: var(--card-hover);
+
+  transform: translateY(-4px);
+}
+
+.drink h3 {
+  color: var(--accent);
+
+  font-size: 18px;
+
+  margin-bottom: 8px;
+}
+
+.drink p {
+  color: var(--text-soft);
+
+  font-size: 14px;
+}
+
+/* =====================================================
+   INCLUYE
+===================================================== */
+
+.includes-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.includes-grid > div {
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 13px;
+
+  padding: 25px;
+}
+
+.includes-grid h3 {
+  color: var(--accent);
+
+  margin-bottom: 8px;
+
+  font-size: 18px;
+}
+
+.includes-grid p {
+  color: var(--text-soft);
+
+  font-size: 14px;
+}
+
+/* =====================================================
+   CONDICIONES
+===================================================== */
+
+.conditions {
+  max-width: 1150px;
+}
+
+.conditions .container {
+  background: var(--background-soft);
+
+  border: 1px solid var(--border);
+
+  border-radius: 15px;
+
+  padding: 40px;
+}
+
+.conditions ul {
+  list-style: none;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px 30px;
+}
+
+.conditions li {
+  position: relative;
+
+  padding-left: 22px;
+
+  color: var(--text-soft);
+
+  font-size: 18px;
+}
+
+.conditions li::before {
+  content: "•";
+
+  position: absolute;
+
+  left: 0;
+
+  color: var(--accent);
+
+  font-size: 20px;
+}
+
+/* =====================================================
+   CONTACTO
+===================================================== */
+
+.contact {
+  max-width: 1150px;
+
+  text-align: center;
+}
+
+.contact .container {
+  padding: 65px 25px;
+
+  background: var(--background-soft);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+}
+
+.contact h2 {
+  font-size: clamp(28px, 5vw, 42px);
+
+  margin-bottom: 10px;
+}
+
+.contact p {
+  color: var(--text-soft);
+
+  margin-bottom: 25px;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+  text-align: center;
+
+  padding: 35px 20px;
+
+  color: #85878c;
+
+  font-size: 13px;
+
+  border-top: 1px solid var(--border);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .drink-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .includes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .nav {
+    display: none;
+  }
+
+  .service-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .conditions ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hero {
+    min-height: 65vh;
+
+    padding: 70px 18px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 60px 18px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .drink-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .includes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 25px 22px;
+  }
+
+  .conditions .container {
+    padding: 30px 22px;
+  }
+
+  .hours-selector {
+    padding: 20px;
+  }
+
+  .duration {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+}
