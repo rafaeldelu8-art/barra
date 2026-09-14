@@ -777,33 +777,83 @@ body {
    RESPONSIVE
 ===================================================== */
 
+@media (max-width: 1200px) {
+  .container,
+  .section,
+  .conditions {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 1000px) {
   .cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .drink-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .includes-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero {
+    min-height: 68vh;
   }
 }
 
 @media (max-width: 850px) {
+  .header-content {
+    min-height: 74px;
+    gap: 18px;
+  }
+
   .nav {
     display: none;
   }
 
   .service-header {
     align-items: flex-start;
-
     flex-direction: column;
   }
 
   .conditions ul {
     grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 700px) {
+  .header-content {
+    min-height: 70px;
+  }
+
+  .logo img {
+    max-width: 140px;
+    max-height: 46px;
+  }
+
+  .hero {
+    min-height: 60vh;
+    padding: 70px 18px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .section-title span {
+    font-size: 32px;
+    letter-spacing: 1px;
+  }
+
+  .section-title h2 {
+    font-size: clamp(26px, 7vw, 36px);
   }
 }
 
@@ -813,28 +863,12 @@ body {
     padding-right: 18px;
   }
 
-  .hero {
-    min-height: 65vh;
-
-    padding: 70px 18px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
   .section {
     padding: 60px 18px;
   }
 
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .drink-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .cards,
+  .drink-grid,
   .includes-grid {
     grid-template-columns: 1fr;
   }
@@ -849,19 +883,81 @@ body {
 
   .hours-selector {
     padding: 20px;
+    max-width: 100%;
   }
 
   .duration {
     align-self: flex-start;
   }
+
+  .contact .container {
+    padding: 50px 18px;
+  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
+  body {
+    line-height: 1.5;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 12vw, 52px);
+    margin: 14px 0 18px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 14px 18px;
+  }
+
   .hero-buttons {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .hero-buttons .btn {
     width: 100%;
+  }
+
+  .service-header h3 {
+    font-size: 23px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .price,
+  .price-value {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .logo img {
+    max-width: 120px;
+  }
+
+  .section-title span {
+    font-size: 26px;
+  }
+
+  .hours-selector {
+    padding: 16px;
+  }
+
+  .footer {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
